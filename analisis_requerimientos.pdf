@@ -1,0 +1,167 @@
+Pregunta 1) Redacta la descripción del proyecto, de manera general en uno o dos párrafos.
+A manera general, se busca construir una base de datos de una sucursal de mediano tamaño
+perteneciente a una corporación ficticia que se dedique a la venta/renta de autos, la sucursal estará
+compuesta por diversos trabajadores de distintas áreas, tales como:
+● Finanzas, será el departamento encargado de administrar los registros de todas las
+transacciones realizadas, tales como venta, renta o devoluciones de automóviles..
+● Sistemas, tendrán la responsabilidad del desarrollo de páginas web en las que se puede
+encontrar información acerca de la sucursal y de la corporación en general.
+● Publicidad, cuya función principal consiste en crear anuncios publicitarios que permitan un
+acercamiento del público en general a las promociones disponibles de la sucursal.
+Cada trabajador tendrá sus datos como id de empleado, nombre y apellido, género, área de
+trabajo,teléfono de contacto, RFC, fecha de nacimiento, domicilio y correo electrónico. La
+compañía maneja una marca de coches en específico, cubriendo a su vez, distintos modelos de
+autos, según sea el año en el que fueron fabricados, color, año de fabricación.
+Dependiendo del tipo de cliente, este puede comprar o rentar algún tipo de automóvil en particular,
+los datos del primero deberán ser tomados al momento de registrar su pedido (tales como nombre y
+apellidos, género, teléfono de contacto, RFC, fecha de nacimiento, domicilio, y correo electrónico),
+de tal modo que, habrá un registro tanto de coches vendidos, como de coches en renta, en el caso de
+que se necesite hacer una devolución, se seguirá una política de devoluciones establecidas por la
+organización y en cuyo caso, se tendrá un historial de todos los coches que fueron devueltos.
+Pregunta 2) Construye el Listado de Supuestos o de Ideas Generales del proyecto.
+● La base de datos almacena información relacionada a los clientes, trabajadores, venta y renta
+de autos de nuestra compañía ficticia, así como la información técnica de los vehículos
+● La vigencia de la renta de vehículos tendrá inicio y fin de vigencia
+● La renta/venta de vehículos será identificada con un número único de contrato
+● Un auto puede ser comprado/rentado por un solo cliente
+● Los datos almacenados corresponden con fecha igual o posterior al 1ro de enero de 2015
+● Cada cliente tiene asociado un nombre,genero , apellido paterno y materno , teléfono de
+contacto, RFC, fecha de nacimiento, domicilio, y correo electrónico
+● Un empleado tiene asociado un nombre,género, ID empleado , apellido paterno y materno ,
+teléfono de contacto, RFC, fecha de nacimiento, domicilio,area de servicio y correo
+electrónico
+● El área de servicio de un empleado se clasifican en ventas, sistemas,finanzas, publicidad,
+recursos humanos, servicio, gerencia.
+● La compañía ofrece servicios extras , cómo venta de seguros , revisión de batería y motor de
+automóvil, entre otros
+● Se llevará un registro de las devoluciones y reclamos de los clientes
+● Los pagos pueden ser en pesos mexicanos (MXN) o dólares (USD) a través de opciones
+como créditos bancarios, efectivo, tarjeta de débito o crédito.
+Pregunta 3) Genera las Lista de Requerimientos Candidatos con los parámetros necesarios a
+partir de la información de la Lista de Ideas Generales.
+Requerimiento 1
+Nombre: Datos
+Descripción: Recabar y almacenar los datos referentes a los clientes, trabajadores y automóviles.
+Valores: Nombre(s), Apellidos, RFC, Domicilio, Modelos, número de ventas, número de rentas
+Requerimiento 2
+Nombre: Cliente
+Descripción: Recabar los datos de cada cliente que solicite la cotización de compra o renta de un
+automóvil.
+Valores: Nombre(s), Apellido materno, Apellido Paterno, Género, Fecha de nacimiento, RFC,
+Domicilio, Teléfono de contacto, Correo electrónico y Estado de solicitud (Aceptado o Rechazado)
+Requerimiento 3
+Nombre: Empleado
+Descripción: Recabar los datos de cada trabajador que labore en la sucursal para tener una correcta
+administración de personal.
+Valores: Número de empleado/ID, Área de servicio, Nombre(s), Apellido materno, Apellido
+paterno, Género, Fecha de nacimiento, RFC, Domicilio, Teléfono de contacto y Correo electrónico.
+Requerimiento 4
+Nombre: Contrato
+Descripción: Asignar a cada contrato un identificador y mencionar sus especificaciones esenciales,
+Valores: ID del Cliente, ID del empleado, Número de contrato, Tipo de contrato (Compra/Renta),
+Cantidad de unidades vendidas y rentadas, Financiamiento, Fecha de compra y Fecha de entrega
+Requerimiento 5
+Nombre: Vigencia de renta
+Descripción: Establecer el periodo de vigencia de la renta del automóvil
+Valores: ID del Cliente, Vehículo (Modelo), Fecha inicial y Fecha final
+Requerimiento 6
+Nombre: Área de servicio
+Descripción: Enlistar los departamentos que conforman la franquicia, así como sus funciones
+específicas, número de elementos y responsable designado.
+Valores: Nombre del área, Función, número de empleados y jefe/encargado de área.
+Requerimiento 7
+Nombre: Automóvil
+Descripción: Describir características particulares del automóvil que brinden información al cliente
+para la toma de decisiones.
+Valores: Gama (Alta, Media y Baja), Modelo (Mini, Camioneta, Deportivo, Ejecutivo, Todoterreno,
+De lujo), Tamaño (Compacto, Familiar y Comercial), Número de puertas (de 1 a 4), Número de
+asientos (de 1 a 6), Bolsas de aire (de 1 a 4), Caballos de fuerza, Fuente de energía (Híbrido,
+Eléctrico o Combustible), Transmisión (Automático o Estándar), En existencia (SI/NO) y
+Kilometraje
+Requerimiento 8
+Nombre: Pagos
+Descripción: Especificar características particulares del pago.
+Valores: Cantidad, Moneda/Divisa y Método de pago (Crédito bancario, Efectivo/De contado,
+Tarjeta de Crédito, Tarjeta de Débito, Cheque y Transferencia electrónica)
+Requerimiento 9
+Nombre: Servicios extras
+Descripción: Enlistar los servicios extras que se ofrecen de acuerdo a la opción elegida de compra o
+renta, los cuales el cliente puede elegir (SI/NO) anexar a su contrato por el periodo de tiempo
+establecido en las garantías.
+Valores: Seguro (de Agencia o Externo), Mantenimiento y Limpieza exterior e interior, Alineación
+y Balanceo, Revisión de baterías, cambio de filtros de aire y combustible, Cambio de plumas de
+parabrisas, Cambio de bandas de distribución, Revisión y/o cambio de pastillas y discos de frenos y
+Protección interna del motor.
+Requerimiento 10
+Nombre: Cambios/Devoluciones
+Descripción: Llevar un control administrativo de las reclamaciones
+Valores: ID del cliente, ID del empleado, Número de contrato, Fecha de reclamación, Plazo de
+reclamo de dos años por ley (Vigente/Vencido), Solicitud (Procede/No procede).
+Pregunta 4) Identifica y clasifica por roles a los diversos actores del proyecto, así como las
+diversas actividades en las que interviene cada uno.
+-Cliente: Entre sus actividades se encuentran: Solicitar el auto a comprar o rentar, dar sus datos
+personales para identificarse, verificar las cualidades del vehículo a obtener y hacer el
+correspondiente pago por su solicitud.
+-Vendedor: Ofrecer la mejor atención e información al cliente sobre los vehículos que puede llegar
+a adquirir dentro de su marca a representar, así como si es el caso, el correcto procedimiento de
+venta hacia el comprador (Si la sucursal tiene, promotores y recepcionistas, también se pueden
+considerar vendedores pues también ayudan a lograr el objetivo de vender o rentar los autos).
+-Administradores-Gerentes: Son los encargados de gestionar los vehículos (tanto vendidos,
+rentados y los nuevos solicitados a recibir) así como de los demás trabajadores en la concesionaria.
+-Mecánicos: Persona encargada de las reparaciones dentro de los autos rentados y futuras
+reparaciones de los vehículos vendidos (Si tienen cobertura)
+-Personas de limpieza: Son aquellas personas encargadas del mantenimiento del área
+pública(Donde se exhiben los autos) como los autos a vender-rentar.
+-Proveedor: Es la empresa encargada del suministro de vehículos.
+Pregunta 6) Identifica y construye la Lista de los Requerimientos Funcionales.
+● Captura de datos.
+● Elegir renta o venta.
+● Pedido de vehículo.
+● Tipo de pago.
+● Servicios extras.
+● Tiempo de respuesta.
+● Cambios o devoluciones.
+Pregunta 7) Identifica y construye la Lista de los Requerimientos No Funcionales inherentes a
+los requerimientos funcionales.
+Requerimiento no funcional asociado al contrato de renta o venta:el cliente decide si va rentar o
+adquirir un automóvil en base a sus necesidades, entonces se aplican diferentes políticas para cada
+caso. Esto es porque son diferentes procedimientos administrativos en los trámites.
+Requerimiento no funcional asociado al pedido del vehículo: el cliente interactúa sólo con un
+vendedor para que conozca sus necesidades y con ello dar mejores opciones de compra, esto evita
+que haya dos pedidos del mismo cliente y haya errores de captura de datos.
+Requerimiento no funcional asociado al tipo de pago: por políticas de la empresa hay planes de
+crédito o de contado para cierto tipo de cliente y también para cierto modelo de automóvil. Esto es
+para ofrecer el mejor plan de pago en función de las necesidades y disponibilidades del cliente.
+Requerimiento no funcional asociado a datos del cliente: por políticas de la empresa se debe de
+obtener los datos personales de los clientes con un aviso de privacidad vigente. Con el objetivo de
+brindar el mejor servicio y considerar si el cliente tiene la disponibilidad de adquirir algún modelo
+de automóvil a través de un crédito, de contado o rentado.
+Requerimientos no funcionales asociados a los servicios extras: en los servicios extra se
+consideran pólizas de seguros de los autos nuevos y rentados, así como el mantenimiento de los
+autos rentados. Por políticas de la empresa hay varios tipos de seguros de autos nuevos, así cada
+cliente decide que seguro tomar o, en algunas ocasiones, contrata un seguro externo a la empresa.
+También todos los autos rentados tienen un seguro y por el tipo de modelo se implementa una
+póliza de seguro diferente, así como políticas en las cuales se considera el mantenimiento periodico
+de los mismos. Esto se hace para mantener un control de los recursos para los autos.
+Requerimientos no funcionales asociados a el tiempo de respuesta: si un cliente quiere un
+automóvil sobre pedido, hay políticas de la empresa en las que se considera un cierto tiempo de
+espera para la llegada del auto. También se considera un tiempo límite para el cambio y devolución
+de un automóvil.
+Requerimientos no funcionales asociado a los cambios y devoluciones: hay políticas de la
+empresa para considerar el posible cambio o devolución de un automóvil, esto es para ver si el auto
+está en las mismas condiciones en las que se le entregó al cliente, normalmente son muy estrictas.
+Al igual que en el servicio de préstamo de automóviles.
+Pregunta 8) Identifica y construye la Lista de los Requerimientos No Funcionales no
+inherentes a los requerimientos funcionales.
+Para nuestra compañía de automóviles, los requerimientos (recursos con los que se cuenta) son:
+● Computadoras: que trabajan con un sistema operativo definido y no se puede cambiar.
+● Teléfonos: para poder dar información al cliente, comunicarse con el proveedor.
+● Impresoras: para generar contratos, facturas, etc.
+● Terminal de cobro: en caso de que el cliente realice un pago con tarjeta de crédito o débito.
+● Caja de cobro: en caso de que el cliente realice un pago en efectivo.
+● Internet: para estar conectados a la red y darle mejor uso al sistema operativo.
+● Mobiliario: para un lugar de trabajo cómodo y ergonómico, donde se genere un entorno de
+trabajo dinámico.
+● Papelería: artículos de papelería varios para su uso.
+● Refacciones: para darle mantenimiento a los automóviles y para su venta.
+● Productos de limpieza: para darle mantenimiento a todo el establecimiento.
